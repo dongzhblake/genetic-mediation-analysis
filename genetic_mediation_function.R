@@ -1,6 +1,6 @@
 SNP_mediation <- function(b.h,se.bh,a.h,se_ah){
   mediation.h=b.h*a.h
-  se_mediation.h=sqrt(se.bh^2*a.h+se_ah^2*b.h+se.bh^2*se_ah^2)
+  se_mediation.h=sqrt(se.bh^2*a.h^2+se_ah^2*b.h^2+se.bh^2*se_ah^2)
   mediation.p=pchisq((mediation.h/se_mediation.h)^2,1,lower.tail = F)
   return(as.data.frame(cbind(mediation.h,se_mediation.h,mediation.p)))
 }
@@ -17,6 +17,7 @@ GWAS_mediation <- function(GWAS_M,a.h,se_ah,GWAS_Y=NULL){
   }
   return(mediation_table)
 }
+
 
 
 read_BOLT <- function(BOLT_result){
