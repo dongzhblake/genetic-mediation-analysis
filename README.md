@@ -15,7 +15,7 @@ Using our example data, we can run BOLT-REML to estimate variance component
 ````
 ./bolt --bfile=example/test --phenoFile=example_folder/test_pheno --phenoCol=M --phenoCol=Y --covarFile=example_folder/test_pheno --qCovarCol=U --reml --noMapCheck 2>&1 | tee output.log
 ````
-We can extract the causal effect estimate using the third R function. Note that any variance-component analysis tool result can be used, such as GCTA.
+We can extract the causal effect estimate from BOTL-REML output using the third R function. Note that any variance-component analysis tool result can be used, such as GCTA. 
 ````
 BOLT=read_BOLT("example_folder/output.log")
 ````
