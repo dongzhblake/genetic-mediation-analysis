@@ -19,7 +19,6 @@ GWAS_mediation <- function(GWAS_M,a.h,se_ah,GWAS_Y=NULL){
 }
 
 
-
 read_BOLT <- function(BOLT_result){
   a=read.table(BOLT_result,sep="\t")
   V1 = a[apply(a,1,FUN=startsWith,prefix="Phenotype 1 variance sigma2: "),]
@@ -28,6 +27,7 @@ read_BOLT <- function(BOLT_result){
   V2 = a[apply(a,1,FUN=startsWith,prefix="Phenotype 2 variance sigma2: "),]
   V2=substr(V2,30,nchar(V2))
   V2=as.numeric(strsplit(V2,"[\\(\\)\\ ]")[[1]][1])
+  C = a[apply(a,1,FUN=startsWith,prefix="  h2e (1,1): "),]
   C=substr(C,14,nchar(C))
   res_M=as.numeric(strsplit(C,"[\\(\\)\\ ]")[[1]][1])*V1
   C = a[apply(a,1,FUN=startsWith,prefix="  resid corr (1,2): "),]
@@ -42,5 +42,5 @@ read_BOLT <- function(BOLT_result){
   D1 = as.numeric(strsplit(D,"[\\(\\)\\ ]")[[1]][7])
   D2 = as.numeric(strsplit(D,"[\\(\\)\\ ]")[[1]][9])
   SE = alphahat_adj/D1*D2
-  return(list(alpha.h,SE_ah))
+  return(list(alpha.h=alphahat_adj,SE_ah=SE))
 }
