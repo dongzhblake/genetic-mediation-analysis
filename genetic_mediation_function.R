@@ -21,7 +21,7 @@ GWAS_mediation <- function(GWAS_M,a.h,se_ah,GWAS_Y=NULL){
 
 
 read_BOLT <- function(BOLT_result){
-  a=BOLT_result
+  a=read.table(BOLT_result,sep="\t")
   V1 = a[apply(a,1,FUN=startsWith,prefix="Phenotype 1 variance sigma2: "),]
   V1=substr(V1,30,nchar(V1))
   V1=as.numeric(strsplit(V1,"[\\(\\)\\ ]")[[1]][1])
