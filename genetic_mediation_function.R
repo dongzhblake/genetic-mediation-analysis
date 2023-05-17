@@ -18,7 +18,7 @@ GWAS_mediation <- function(GWAS_M,a.h,se_ah,GWAS_Y=NULL){
   return(mediation_table)
 }
 
-GWAS_mediation(GWAS_M,a.h,se_ah)
+
 
 read_BOLT <- function(BOLT_result){
   a=BOLT_result
