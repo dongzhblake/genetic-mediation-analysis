@@ -33,4 +33,4 @@ For genome-level genetic mediation analysis,
 GWAS_mediation(GWAS_M,BOLT$alpha.h,BOLT$SE_ah,GWAS_Y)
 ````
 
-
+Please contact zihan.dong@yale.edu if there are any problems.
