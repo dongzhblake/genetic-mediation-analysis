@@ -15,26 +15,26 @@ Boost version: 1_58
 
 Command line options:
 
-/home/zd72/BOLT-LMM_v2.4.1/bolt \
-    --bfile=/gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test \
-    --phenoFile=/gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test_pheno \
+./BOLT-LMM_v2.4.1/bolt \
+    --bfile=example_folder/test \
+    --phenoFile=example_folder/test_pheno \
     --phenoCol=M \
     --phenoCol=Y \
-    --covarFile=/gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test_pheno \
+    --covarFile=example_folder/test_pheno \
     --qCovarCol=U \
     --reml \
     --noMapCheck 
 
 Setting number of threads to 1
-fam: /gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test.fam
-bim(s): /gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test.bim
-bed(s): /gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test.bed
+fam: example_folder/test.fam
+bim(s): example_folder/test.bim
+bed(s): example_folder/test.bed
 
 === Reading genotype data ===
 
 Total indivs in PLINK data: Nbed = 100
 Total indivs stored in memory: N = 100
-Reading bim file #1: /gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test.bim
+Reading bim file #1: example_folder/test.bim
     Read 1000 snps
 Total snps in PLINK data: Mbed = 1000
 
@@ -45,7 +45,7 @@ Breakdown of SNP pre-filtering results:
 WARNING: No genetic map provided; using physical positions only
 Allocating 1000 x 100/4 bytes to store genotypes
 Reading genotypes and performing QC filtering on snps and indivs...
-Reading bed file #1: /gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test.bed
+Reading bed file #1: example_folder/test.bed
     Expecting 25000 (+3) bytes for 100 indivs, 1000 snps
 Total indivs after QC: 100
 Total post-QC SNPs: M = 1000
@@ -55,9 +55,9 @@ Time for SnpData setup = 0.00426197 sec
 === Reading phenotype and covariate data ===
 
 Read data for 100 indivs (ignored 0 without genotypes) from:
-  /gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test_pheno
+  example_folder/test_pheno
 Read data for 100 indivs (ignored 0 without genotypes) from:
-  /gpfs/gibbs/pi/dewan/work/Zihan/mediationLMM/data/example/test_pheno
+  example_folder/test_pheno
 Number of indivs with no missing phenotype(s) to use: 100
 NOTE: Using all-1s vector (constant term) in addition to specified covariates
     Using quantitative covariate: U
