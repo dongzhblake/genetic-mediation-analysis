@@ -5,6 +5,7 @@ Three are three main functions in the R script genetic_mediation_function. The f
 
 Load and use these functions by 
 ````
+library("devtools")
 devtools::source_url("https://github.com/dongzhblake/genetic-mediation-analysis/blob/main/genetic_mediation_function.R?raw=TRUE")
 ````
 User manual of BOLE-REML can be found at 
