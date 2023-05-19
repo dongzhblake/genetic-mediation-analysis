@@ -8,6 +8,10 @@ Load and use these functions by
 library("devtools")
 devtools::source_url("https://github.com/dongzhblake/genetic-mediation-analysis/blob/main/genetic_mediation_function.R?raw=TRUE")
 ````
+or download the R package
+````
+devtools::install_github('dongzhblake/genetic.mediation')
+````
 User manual of BOLE-REML can be found at 
 ````
 https://alkesgroup.broadinstitute.org/BOLT-LMM/BOLT-LMM_manual.html
